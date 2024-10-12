@@ -65,6 +65,7 @@ class _ChartState extends State<Chart> with AutomaticKeepAliveClientMixin {
                       'BTC/USDT Technical Chart',
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
+                    SizedBox()
                   ],
                 ),
               ),
