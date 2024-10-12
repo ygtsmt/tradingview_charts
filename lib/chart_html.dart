@@ -1,4 +1,4 @@
-class CoinInfoChart {
+class CoinInfoChartHtml {
   static String coinInfoChartAndSource(
       String name, String theme, String localeSymbol) {
     return '''<!-- TradingView Widget BEGIN -->

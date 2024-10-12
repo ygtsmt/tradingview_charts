@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tradingview_flutter/coin_info_chart_html.dart';
+import 'package:tradingview_flutter/chart_view.dart';
 
 class ChartWidget extends StatelessWidget {
   final String cryptoName;
@@ -16,7 +16,7 @@ class ChartWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChartHtml(
+    return ChartView(
       cryptoName: cryptoName,
       theme: theme,
       locale: locale,

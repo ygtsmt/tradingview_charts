@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:tradingview_flutter/coin_info_chart.dart';
-import 'package:tradingview_flutter/tradingview_chart_techincal.dart';
+import 'package:tradingview_flutter/chart_html.dart';
+import 'package:tradingview_flutter/chart_techincal_html.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-class ChartHtml extends StatefulWidget {
-  const ChartHtml({
+class ChartView extends StatefulWidget {
+  const ChartView({
     required this.cryptoName,
     super.key,
     required this.theme,
@@ -17,10 +17,10 @@ class ChartHtml extends StatefulWidget {
   final String locale;
   final bool isTechnical;
   @override
-  State<ChartHtml> createState() => _ChartHtmlState();
+  State<ChartView> createState() => _ChartViewState();
 }
 
-class _ChartHtmlState extends State<ChartHtml> {
+class _ChartViewState extends State<ChartView> {
   late final WebViewController controller;
 
   @override
@@ -78,7 +78,7 @@ class _ChartHtmlState extends State<ChartHtml> {
             ),
           )
           ..enableZoom(true)
-          ..loadHtmlString(CoinInfoChart.coinInfoChartAndSource(
+          ..loadHtmlString(CoinInfoChartHtml.coinInfoChartAndSource(
               widget.cryptoName, widget.theme, widget.locale)));
   }
 
